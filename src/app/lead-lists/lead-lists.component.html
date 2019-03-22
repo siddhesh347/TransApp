@@ -1,0 +1,52 @@
+
+
+<div class="row">
+<div class="form-group col-3">
+    <input 
+    type="text" class="form-control" 
+    placeholder="Search By Name"
+    style="widows: 170px;"
+    [(ngModel)]="searchterm">
+</div>
+<div class="form-group col-2">
+    <select class="form-control" [(ngModel)]="statusFilter">
+        <option [ngValue]="'all'">All</option>
+        <option *ngFor="let status of statuses" [ngValue]="status">{{status}}</option>
+    </select>
+</div>
+
+
+
+</div>
+
+<div>
+    
+    <!--
+    <div *ngFor="let obj of DoFilter()" style="border-bottom: 2px solid black; margin-bottom:15px">
+
+        <div >
+            <label for="Name">Name: </label>
+            {{obj.name}}
+
+        </div>
+        <div>
+                <label for="Application_id">Application_id:</label>
+            {{obj.application_id}}
+
+        </div>
+        <div>
+            <label for="Status">Status:</label>
+            {{obj.status}}
+
+        </div> -->
+       <div>Data Obtained is:{{data|json}}</div>
+
+
+
+    </div> 
+
+
+    <div id="icondiv">
+        <button mat-fab color="primary" class="matbtn" (click)="leadForm()"><mat-icon  id="addleads" >+</mat-icon ></button>
+    </div>
+

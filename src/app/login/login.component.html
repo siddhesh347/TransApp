@@ -1,0 +1,61 @@
+
+<mat-toolbar>
+    <span class="title-center">Dealer App</span>
+  </mat-toolbar>
+
+
+
+<mat-card class="example-card">
+
+   
+    
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+      
+  
+  <mat-card-content>
+      <img src="/assets/img/trans.png">
+    <form class="example-form">
+         
+      <table class="example-full-width" cellspacing="0">
+       
+        <tr>
+          <td>
+            <mat-form-field>
+     
+            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+          
+        </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+        <td><mat-form-field>
+          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+        
+        </mat-form-field></td>
+        
+      </tr>
+      <tr>
+<h6>Dealer Type</h6>
+          <mat-form-field>
+              <select matNativeControl required>
+                <option value="Individual">Individual</option>
+                <option value="Agency">Agency</option>
+            
+              </select>
+            </mat-form-field>
+      </tr>
+  
+    </table>
+     
+    </form>
+   
+    <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button (click)="btnClick()" color="primary">Login</button>
+  </mat-card-actions>
+</mat-card>
+
